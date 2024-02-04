@@ -141,4 +141,48 @@ public class UtenteDao {
 			// Gestire l'eccezione in modo appropriato
 		}
 	}
+
+	public static Utenti mapResultSetToUtente(ResultSet resultSet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+     * Ottiene la lista degli ordini associati a un utente.
+     *
+     * @param idUtente ID dell'utente per cui ottenere gli ordini associati.
+     * @return Lista degli ordini associati all'utente o una lista vuota se non ne ha.
+     */
+    public List<Ordine> getOrdiniByUtenteId(int idUtente) {
+        List<Ordine> ordiniList = new ArrayList<>();
+
+        try {
+            // Query SQL per selezionare gli ordini associati all'utente dato l'ID dell'utente
+            String sql = "SELECT * FROM Ordini WHERE idUtente=?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setInt(1, idUtente);
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    while (resultSet.next()) {
+                        // Per ogni risultato, mappa il ResultSet a un oggetto Ordini
+                        Ordine ordine = mapResultSetToOrdini(resultSet);
+                        // Aggiungi l'ordine alla lista
+                        ordiniList.add(ordine);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Gestire l'eccezione in modo appropriato
+        }
+
+        return ordiniList;
+    }
+
+	private Ordine mapResultSetToOrdini(ResultSet resultSet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
+	
+	
+

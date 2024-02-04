@@ -4,8 +4,8 @@
 <%@ page import="model.Utenti" %>
 <%@ page import="dao.UtenteDao" %>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 <html>
 <head>
@@ -100,7 +100,7 @@
     <%-- Aggiunto Bootstrap al pulsante Torna alla Index --%>
     <a href="index.jsp" class="btn btn-primary">Torna alla Index</a>
 </div>
-<c:out value="STO nel TagLib  <c:out/>" />
+<c:out value="STO nel TagLib" />
 
 
 <!-- Bootstrap JS e jQuery -->

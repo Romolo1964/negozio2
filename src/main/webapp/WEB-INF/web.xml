@@ -10,13 +10,6 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
-  <!-- Aggiungi questa configurazione per JSTL -->
-    <jsp-config>
-        <jsp-property-group>
-            <url-pattern>*.jsp</url-pattern>
-            <el-ignored>false</el-ignored>
-        </jsp-property-group>
-    </jsp-config>
   
   
   <resource-ref>
@@ -59,5 +52,6 @@
     <servlet-name>EliminaUtenteServelet</servlet-name>
     <url-pattern>/EliminaUtenteServelet</url-pattern>
   </servlet-mapping>
+  
   
 </web-app>
