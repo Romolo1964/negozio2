@@ -9,6 +9,16 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- Aggiungi questa configurazione per JSTL -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <el-ignored>false</el-ignored>
+        </jsp-property-group>
+    </jsp-config>
+  
+  
   <resource-ref>
     <description>DB Connection</description>
     <res-ref-name>jdbc/neg</res-ref-name>
